@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Simple Calculator</string>
+    <string name="left_operand">Left Operand</string>
+    <string name="right_operand">Right Operand</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="clear">C</string>
+    <string name="result">Result</string>
+    <string name="divide_by_zero">Number can not be divided by 0</string>
+</resources>
