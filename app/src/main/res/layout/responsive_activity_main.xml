@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.subramani_5647.simplecalculator.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:text="@string/left_operand"
+                android:id="@+id/leftOperandLabel"/>
+
+            <EditText
+                android:padding="3dp"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:id="@+id/leftOperand"
+                android:nextFocusDown="@+id/rightOperand" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:text="@string/right_operand"
+                android:id="@+id/rightOperandLabel"/>
+
+            <EditText
+                android:padding="3dp"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:id="@+id/rightOperand"
+                android:nextFocusDown="@+id/plus" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/plus"
+            android:nextFocusRight="@+id/minus"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/minus"
+            android:nextFocusRight="@+id/multiply"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/multiply"
+            android:nextFocusRight="@+id/divide"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/divide"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/divide"
+            android:nextFocusRight="@+id/clear"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/clear"
+            android:nextFocusRight="@+id/clear"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="20dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:text="@string/result"/>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/wa_website_button"
+        android:text="@string/take_me_to_webcalc"
+        android:layout_height="60dp" />
+</LinearLayout>
+</ScrollView>
