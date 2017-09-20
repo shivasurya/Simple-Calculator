@@ -1,8 +1,11 @@
 package com.example.subramani_5647.simplecalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -12,15 +15,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText rightOperand;
     private TextView result;
 
+    private Button webCalcButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.responsive_activity_main);
 
-        leftOperand = (EditText) findViewById(R.id.leftOperand);
-        rightOperand = (EditText) findViewById(R.id.rightOperand);
-        result = (TextView) findViewById(R.id.result);
+        leftOperand = findViewById(R.id.leftOperand);
+        rightOperand = findViewById(R.id.rightOperand);
+        result = findViewById(R.id.result);
 
+        webCalcButton = findViewById(R.id.wa_website_button);
+        webCalcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getApplicationContext(),webViewCalculator.class);
+                startActivity(mIntent);
+            }
+        });
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     @Override

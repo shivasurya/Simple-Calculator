@@ -9,4 +9,6 @@
     <string name="clear">C</string>
     <string name="result">Result</string>
     <string name="divide_by_zero">Number can not be divided by 0</string>
+    <string name="take_me_to_webcalc">Take me to web calc</string>
+    <string name="webcalc_url">Need to replace runtime</string>
 </resources>
